@@ -62,7 +62,7 @@ before using IraVoice with sensitive text.
 ## Verify the notarized release
 
 - [Current release and product identity](https://iravoice.com/about)
-- [Published SHA-256 checksum](https://iravoice.com/downloads/IraVoice-0.7.1.dmg.sha256)
+- [Published SHA-256 checksum](https://iravoice.com/downloads/IraVoice-0.7.2.dmg.sha256)
 - [Plain-text product and release facts](https://iravoice.com/assets/press/iravoice-press-facts.txt)
 - [Mac dictation privacy matrix](https://iravoice.com/research/mac-dictation-privacy-matrix)
 
