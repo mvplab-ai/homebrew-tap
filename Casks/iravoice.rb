@@ -7,6 +7,12 @@ cask "iravoice" do
   desc "Private on-device dictation and voice-to-spec"
   homepage "https://iravoice.com/"
 
+  livecheck do
+    url "https://iravoice.com/assets/press/iravoice-product-facts.json"
+    regex(/"softwareVersion"\s*:\s*"v?(\d+(?:\.\d+)+)"/i)
+    strategy :page_match
+  end
+
   depends_on arch: :arm64
   depends_on macos: :tahoe
 
