@@ -1,6 +1,6 @@
 cask "iravoice" do
-  version "0.7.5"
-  sha256 "42590aded7fa3e6a1a36e475e68ec677b91b858b7630db26e8bc32ed44140416"
+  version "0.7.6"
+  sha256 "1b63455c5143199f353c010aa15ca7e0f6825b032a34a78d17d52ce2cb555f0c"
 
   url "https://iravoice.com/downloads/distribution/IraVoice-#{version}.dmg"
   name "IraVoice"
