@@ -1,10 +1,10 @@
 cask "iravoice" do
-  version "0.7.6"
-  sha256 "1b63455c5143199f353c010aa15ca7e0f6825b032a34a78d17d52ce2cb555f0c"
+  version "0.8.0"
+  sha256 "461236fb8c4ba9adc5e8b4bb805fccf63088b5a3780130d42dcf003829cc8ae3"
 
   url "https://iravoice.com/downloads/distribution/IraVoice-#{version}.dmg"
   name "IraVoice"
-  desc "Private on-device dictation and voice-to-spec"
+  desc "Private on-device dictation"
   homepage "https://iravoice.com/"
 
   livecheck do
