@@ -1,20 +1,30 @@
 cask "iravoice" do
-  version "0.8.1"
-  sha256 "b74107091b1da3866c1a506c5a159e6c31977ffd7ea6e6aa865dfbf7e8fb524c"
+  version "1.0.0"
+  sha256 "852ec123ad18780d1f27c08e9ecd0d1d46196f13035f12d67b2b133f2c9ed987"
 
-  url "https://iravoice.com/downloads/distribution/IraVoice-#{version}.dmg"
+  url "https://api.iravoice.com/v1/files/desktop/#{version}/IraVoice-#{version}-mac-arm64.dmg"
   name "IraVoice"
-  desc "Private on-device dictation"
+  desc "Private, developer-first dictation"
   homepage "https://iravoice.com/"
 
   livecheck do
-    url "https://iravoice.com/assets/press/iravoice-product-facts.json"
-    regex(/"softwareVersion"\s*:\s*"v?(\d+(?:\.\d+)+)"/i)
-    strategy :page_match
+    url "https://api.iravoice.com/v1/updates/darwin/aarch64/0.0.0"
+    strategy :json do |json|
+      json["version"]
+    end
   end
 
+  auto_updates true
   depends_on arch: :arm64
-  depends_on macos: :tahoe
+  depends_on macos: ">= :ventura"
 
   app "IraVoice.app"
+
+  zap trash: [
+    "~/Library/Application Support/com.iravoice.app",
+    "~/Library/Caches/com.iravoice.app",
+    "~/Library/Logs/com.iravoice.app",
+    "~/Library/Preferences/com.iravoice.app.plist",
+    "~/Library/WebKit/com.iravoice.app",
+  ]
 end
