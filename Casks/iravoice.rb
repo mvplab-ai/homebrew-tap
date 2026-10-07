@@ -1,6 +1,6 @@
 cask "iravoice" do
-  version "1.2.1"
-  sha256 "e142804d52004de4fbe06478dfc5934d5e7c63cadef4cb8f78b40251ddf2259b"
+  version "1.2.2"
+  sha256 "4ac82d529f7156a4e2c927f96dd084d899390dcc46b2e4da06e3219c9984a64f"
 
   url "https://api.iravoice.com/v1/files/desktop/#{version}/IraVoice-#{version}-mac-arm64.dmg"
   name "IraVoice"
